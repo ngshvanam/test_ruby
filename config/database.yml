@@ -6,6 +6,7 @@
 #
 default: &default
   adapter: postgresql
+  host: localhost
   pool: 5
 
 
@@ -20,4 +21,5 @@ development:
 
 production:
   <<: *default
+  username: user
   database: test-rubing_production
