@@ -6,56 +6,54 @@
 #
 
 
+#default: &default
+#  adapter: mysql2
+#  encoding: utf8
+#  username: ngshvanam
+#  password:
+#  host: localhost
+#  pool: 5
+
+#development:
+#  <<: *default
+#  database: marketplace_api_dev
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+#test:
+#  <<: *default
+#  database: marketplace_api_test
+
+#production:
+#  <<: *default
+#  database: marketplace_api_prod
+
+
+
+
+
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  username: ngshvanam
-  password:
-  host: localhost
+  adapter: postgresql
+  encoding: unicode
   pool: 5
+
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+development:
+  <<: *default
+  database: developmentql
 
 development:
   <<: *default
-  database: marketplace_api_dev
+  username: skateparks
+  password: skateparks
+  database: test-rubing_test
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: marketplace_api_test
-
-production:
-  <<: *default
-  database: marketplace_api_prod
-
-
-
-
-
-#default: &default
-#  adapter: postgresql
-#  encoding: unicode
-#  pool: 5
-
-
-
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-#development:
-#  <<: *default
-#  database: developmentql
-
-#development:
-#  <<: *default
-#  username: skateparks
-#  password: skateparks
-#  database: test-rubing_test
-
-#test:
-#  <<: *default
-#  username: skateparks
-#  password: skateparks
-#  database: test-rubing_test
+  username: skateparks
+  password: skateparks
+  database: test-rubing_test
