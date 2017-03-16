@@ -19,7 +19,7 @@ default: &default
 #  <<: *default
 #  database: developmentql
 
-#production:
-#  <<: *default
-#  username: user
-#  database: test-rubing_production
+production:
+  <<: *default
+  username: user
+  database: test-rubing_production
