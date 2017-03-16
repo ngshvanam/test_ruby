@@ -1,3 +1,6 @@
 language: ruby
 rvm:
-  - 2.3
+  - 2.3.0p0
+gemfile:
+  - Gemfile
+  - gemfiles/eventmachine-pre
