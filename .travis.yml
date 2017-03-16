@@ -4,3 +4,5 @@ dist: trusty
 rvm:
   - 2.4.0
 bundler_args: --without production
+before_script:
+  - psql -c "CREATE USER skateparks WITH PASSWORD 'skateparks';" -U postgres

@@ -19,7 +19,8 @@ default: &default
 #  <<: *default
 #  database: developmentql
 
-production:
+test:
   <<: *default
-  username: user
-  database: test-rubing_production
+  username: skateparks
+  password: skateparks
+  database: test-rubing_test
